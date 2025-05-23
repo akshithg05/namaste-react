@@ -1,0 +1,20 @@
+{
+  "name": "lesson-2",
+  "version": "1.0.0",
+  "description": "namaste react lesson 2",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Akshith G",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.15.1"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ]
+}
