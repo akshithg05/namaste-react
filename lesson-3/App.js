@@ -14,16 +14,54 @@ import { createRoot } from "react-dom/client";
 
 // const heading = React.createElement("h1", { id: "heading" }, "This is the heading");
 
-// JSX
-const jsxHeading = (
+// JSX - returns a react element only.
+
+// This is a react element
+const title = (
   <h1 id="heading" className="heading">
     Hello world from JSX
   </h1>
 );
 
-// console.log(heading);
-console.log(jsxHeading);
+const number = 1000;
+// React functional component - 3 ways of writing it
+
+// 1) full explicit way of writing with function.
+function HeadingComponent() {
+  return (
+    <div>
+      <h1 className="heading">Heading with React Functional Component 1</h1>
+      <h2>{number}</h2>
+      {title}
+    </div>
+  );
+}
+
+// 2) With arrow function
+const HeadingComponent2 = () => {
+  return (
+    <div>
+      <h1 className="heading">Heading with React Functional Component 2</h1>
+    </div>
+  );
+};
+
+// 3) With arrow function and no return
+const HeadingComponent3 = () => (
+  <div>
+    <h1 className="heading" id="heading3">
+      Heading with React Functional Component 3
+    </h1>
+  </div>
+);
 
 const root = createRoot(document.getElementById("root"));
 
-root.render(jsxHeading);
+root.render(
+  // Component composition - merging many components into 1
+  <div id="parent">
+    <HeadingComponent />
+    <HeadingComponent2 />
+    <HeadingComponent3 />
+  </div>
+);
